@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="/">
+      <img src="/static/images/logo.svg" alt="A Company Logo"/>
+    </a>
+    <div class="header__wrap">
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="/">Home</a></li>
+          <li class="nav__item"><a href="/blog">Blog</a></li>
+          <li class="nav__item"><a href="/faqs">FAQs</a></li>
+          <li class="nav__item"><a href="/about">About</a></li>
+        </ul>
+      </nav>
+      <div class="header__action button">
+        <a href="/contact">Get in Touch</a>
+      </div>
+      <button class="button header__search alt"><i class="fas fa-search"></i></button>
+      {% include "./hamburgerMenu.njk" %}
+    </div>
+  </div>
+</header>

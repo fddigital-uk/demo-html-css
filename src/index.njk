@@ -1,0 +1,17 @@
+---
+title: Homepage
+---
+
+{% extends 'base.njk' %}
+
+{% block main_class -%}
+  index
+{%- endblock %}
+
+{% block body %}
+    <h1 class="center">It all started with this...</h1>
+{% endblock %}
+
+{% block scripts %}
+  <script type="application/javascript" src="/assets/index.js"></script>
+{% endblock %}

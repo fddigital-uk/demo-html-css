@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body {
+  background-color: #011827;
+  font-size: $text-size;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+  color: $text-color-page-head;
+  text-shadow: $text-page-head-shadow;
+  small {
+    font-size: 0.7em;
+  }
+}
+
+.button {
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  padding: $spacing-small;
+  font-family: $font-family-button;
+  font-size: 1.33rem;
+  box-shadow: $button-shadow;
+  border: none;
+  cursor: pointer;
+
+  &.alt {
+    background-color: $button-bg-color-alt;
+    color: $button-text-color-alt;
+    box-shadow: $button-shadow-alt;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+

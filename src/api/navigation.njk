@@ -1,0 +1,9 @@
+{# This will export the navigation data to json so it can be consumed client side! #}
+[
+  {% for item in navigation.header  %}
+    {
+      "text": "{{ item.text }}",
+      "link": "{{ item.link }}"
+    }{{ ',' if not loop.last }}
+  {% endfor  %}
+]

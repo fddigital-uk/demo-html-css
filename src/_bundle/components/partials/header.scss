@@ -1,0 +1,168 @@
+.header {
+  width: 100%;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  font-family: $font-family-heading;
+  font-size: 1.33rem;
+  position: fixed;
+  padding-top: $spacing-medium;
+  padding-bottom: $spacing-medium;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: $header-height-desktop;
+  }
+
+  &__wrap {
+    display: flex;
+    position: relative;
+  }
+
+  &__action {
+    max-width: 5rem;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__search {
+    margin-left: $spacing + $button-shadow-width;
+  }
+
+  .hamburger {
+    margin-left: $spacing-medium;
+  }
+
+  &,
+  a {
+    color: $text-color-light;
+  }
+
+  &__logo {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    flex-grow: 1;
+    img {
+      width: 17rem;
+    }
+  }
+
+  body, html {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+
+  &__phone {
+    display: none;
+    padding: 0 $spacing-large;
+    font-weight: bold;
+  }
+
+  &__contact {
+    display: none;
+    padding-left: $spacing;
+  }
+
+  .button {
+    padding-top: $spacing-small - 2px;
+    padding-bottom: $spacing-small - 2px;
+  }
+
+  .hamburger {
+    margin-right: $spacing-medium;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+  }
+
+  &.open {
+    nav {
+      background-color: grey;
+      display: flex;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(var(--vh, 1vh) * 100);
+      overflow-y: scroll;
+
+      text-align: right;
+      padding-top: $header-height-mobile ;
+      flex-direction: column;
+      box-sizing: border-box;
+
+      > * {
+        border: none;
+        padding: $spacing-medium;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  a {
+    padding: 0px $spacing;
+  }
+
+  > *:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__logo {
+      position: initial;
+    }
+
+    .hamburger {
+      position: relative;
+      margin-right: 0;
+    }
+
+    &__phone,
+    &__contact {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      margin-right: $spacing-medium;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

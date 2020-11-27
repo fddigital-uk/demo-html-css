@@ -1,0 +1,49 @@
+$spacing-small: 7px;
+$spacing: 15px;
+$spacing-medium: $spacing * 2;
+$spacing-large: $spacing * 3;
+$spacing-xlarge: $spacing * 4;
+$spacing-xxlarge: $spacing * 5;
+
+$color-neutral: white;
+$color-one: #0d4f6c;
+$color-two: #195873;
+$color-three: #f7f7f9;
+$color-four: #00b8ee;
+$color-five: #3f4a4f;
+$color-six: #083d55;
+$color-error: rgb(235, 0, 0);
+$color-success: #1fbe53;
+
+
+$color-three-gradient: #d8d8d8;
+
+$text-color-main: $color-one;
+$text-color-alt: #7e8085;
+$text-color-highlight: #00b8ee;
+$text-color-light: #fff;
+$text-color-page-head: #E8FBFF;
+$text-page-head-shadow: -5px 5px 0px rgba(255, 255, 255, 0.25);
+
+$text-size-mobile: 10px;
+$text-size-tablet: 14px;
+$text-size: 18px;
+$text-size-body: 1rem;
+$font-family: Wotfard, arial, sans-serif;
+$font-family-heading: Bungee, arial, sans-serif;
+$font-family-button: Bungee, arial, sans-serif;
+
+$button-bg-color: #4181A7;
+$button-text-color: $text-color-light;
+$button-shadow: -5px 5px 0px rgba(65, 129, 167, 0.5);
+$button-bg-color-alt: #00AF4B;
+$button-text-color-alt: $text-color-light;
+$button-shadow-alt: -5px 5px 0px rgba(0, 175, 75, 0.5);
+$button-shadow-width: 5px;
+
+$header-height-mobile: 10rem;
+$header-height-desktop: 10rem;
+
+$max-width: 1200px;
+$box-border-radius: 30px;
+
