@@ -21,9 +21,11 @@
   &__wrap {
     display: flex;
     position: relative;
+    min-height: 4rem;
   }
 
   &__action {
+    display: none;
     max-width: 5.5rem;
 
     a {
@@ -34,10 +36,17 @@
 
   &__search {
     margin-left: $spacing + $button-shadow-width;
+    display: none;
+  }
+
+  &__hamburger {
+    display: flex;
+    align-items: center;
   }
 
   .hamburger {
     margin-left: $spacing-medium;
+    flex-grow: 1;
   }
 
   &,
@@ -49,8 +58,6 @@
 
   &__logo {
     display: block;
-    position: absolute;
-    z-index: 100;
     flex-grow: 1;
     img {
       width: 17rem;
@@ -77,13 +84,6 @@
   .button {
     padding-top: $spacing-small - 2px;
     padding-bottom: $spacing-small - 2px;
-  }
-
-  .hamburger {
-    margin-right: $spacing-medium;
-    position: absolute;
-    z-index: 100;
-    right: 0;
   }
 
   &.open {
@@ -141,13 +141,19 @@
 
 @media screen and (min-width: 768px) {
   .header {
+    &__wrap {
+      min-height: unset;
+    }
     &__logo {
       position: initial;
     }
 
-    .hamburger {
-      position: relative;
-      margin-right: 0;
+    &__action {
+      display: block;
+    }
+
+    &__search {
+      display: block;
     }
 
     &__phone,

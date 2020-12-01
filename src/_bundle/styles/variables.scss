@@ -9,13 +9,14 @@ $spacing-xxlarge: $spacing * 5;
 $box-shadow: -5px 5px 0px;
 
 $color-neutral: white;
-$color-one: #4181a7;
+$color-one: #3F7DA2;
 $color-one-text: $color-neutral;
 $color-one-border: white;
 $color-one-shadow: darken(#4181a7, 15);
-$color-two: #00af4b;
+//$color-two: #00af4b;
+$color-two: #008539;
 $color-two-text: $color-neutral;
-$color-two-shadow: darken(#00af4b, 15);
+$color-two-shadow: darken(#008539, 15);
 $color-two-border: white;
 $color-three: #c9d0d7;
 $color-three-text: #000;
@@ -29,7 +30,7 @@ $color-four: #00b8ee;
 $color-five: #3f4a4f;
 $color-six: #083d55;
 $color-error: rgb(235, 0, 0);
-$color-success: #1fbe53;
+$color-success: #008539;
 
 
 $color-three-gradient: #d8d8d8;
@@ -48,12 +49,12 @@ $font-family: Wotfard, arial, sans-serif;
 $font-family-heading: Bungee, arial, sans-serif;
 $font-family-button: Bungee, arial, sans-serif;
 
-$button-bg-color: #4181A7;
+$button-bg-color: #3F7DA2;
 $button-text-color: $text-color-light;
-$button-shadow: -5px 5px 0px rgba(65, 129, 167, 0.5);
-$button-bg-color-alt: #00af4b;
+$button-shadow: -5px 5px 0px darken(#3F7DA2, 8);
+$button-bg-color-alt: #008539;
 $button-text-color-alt: $text-color-light;
-$button-shadow-alt: -5px 5px 0px rgba(0, 175, 75, 0.5);
+$button-shadow-alt: -5px 5px 0px darken(#008539, 8);
 $button-shadow-width: 5px;
 
 $header-height-mobile: 10rem;
