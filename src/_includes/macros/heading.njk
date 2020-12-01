@@ -1,0 +1,10 @@
+{% macro headingTag(tag, large, class) %}
+  <{{ tag }} class="heading__tag {% if large %}heading--large{% endif %} {{ class }}">{{ caller() }}</{{ tag }}>
+{% endmacro %}
+
+{% macro heading(tag, text, large, class) %}
+  <header>
+    {% call headingTag(tag, large, class) -%}{{ text | safe }}{%- endcall %}
+    {% if caller %}<span class="heading__subtext">{{ caller() }}</span>{% endif %}
+  </header>
+{% endmacro %}

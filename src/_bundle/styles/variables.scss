@@ -6,9 +6,15 @@ $spacing-xlarge: $spacing * 4;
 $spacing-xxlarge: $spacing * 5;
 
 $color-neutral: white;
-$color-one: #0d4f6c;
-$color-two: #195873;
-$color-three: #f7f7f9;
+$color-one: #4181a7;
+$color-one-shadow: #4181a7;
+$color-two: #00af4b;
+$color-two-shadow: #00af4b;
+$color-three: #c9d0d7;
+$color-three-border: white;
+$color-three-shadow: -5px 5px 0px rgba(155, 158, 155, 0.6);
+$color-four: #00b8ee;
+$color-four-shadow: -5px 5px 0px #c9d0d7;
 $color-four: #00b8ee;
 $color-five: #3f4a4f;
 $color-six: #083d55;
@@ -36,7 +42,7 @@ $font-family-button: Bungee, arial, sans-serif;
 $button-bg-color: #4181A7;
 $button-text-color: $text-color-light;
 $button-shadow: -5px 5px 0px rgba(65, 129, 167, 0.5);
-$button-bg-color-alt: #00AF4B;
+$button-bg-color-alt: #00af4b;
 $button-text-color-alt: $text-color-light;
 $button-shadow-alt: -5px 5px 0px rgba(0, 175, 75, 0.5);
 $button-shadow-width: 5px;
@@ -46,4 +52,9 @@ $header-height-desktop: 10rem;
 
 $max-width: 1200px;
 $box-border-radius: 30px;
+
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
 

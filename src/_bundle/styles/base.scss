@@ -1,10 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+@font-face {
+  font-family: 'wotfard';
+  src: url('/static/fonts/wotfard-light-webfont.eot');
+  src: url('/static/fonts/wotfard-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/wotfard-light-webfont.woff2') format('woff2'),
+  url('/static/fonts/wotfard-light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'wotfard';
+  src: url('/static/fonts/wotfard-medium-webfont.eot');
+  src: url('/static/fonts/wotfard-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/wotfard-medium-webfont.woff2') format('woff2'),
+  url('/static/fonts/wotfard-medium-webfont.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'wotfard';
+  src: url('/static/fonts/wotfard-regular-webfont.eot');
+  src: url('/static/fonts/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/wotfard-regular-webfont.woff2') format('woff2'),
+  url('/static/fonts/wotfard-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background-color: #011827;
   font-size: $text-size;
   padding: 0;
   margin: 0;
+  font-family: Wotfard, SansSerif, sans-serif;
 }
 
 a {
@@ -14,11 +48,18 @@ a {
 h1, h2, h3, h4, h5 {
   font-family: $font-family-heading;
   text-transform: uppercase;
-  color: $text-color-page-head;
-  text-shadow: $text-page-head-shadow;
+  margin: 0;
   small {
     font-size: 0.7em;
   }
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2.1rem;
 }
 
 .button {
@@ -26,10 +67,11 @@ h1, h2, h3, h4, h5 {
   color: $button-text-color;
   padding: $spacing-small;
   font-family: $font-family-button;
-  font-size: 1.33rem;
+  font-size: 1.5rem;
   box-shadow: $button-shadow;
   border: none;
   cursor: pointer;
+  display: inline-block;
 
   &.alt {
     background-color: $button-bg-color-alt;
@@ -52,4 +94,7 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+}
 

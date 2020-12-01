@@ -1,0 +1,26 @@
+{% from "./blurb.njk" import blurb %}
+{% macro quoteBox(name, date) %}
+  {% call blurb('filled', 'quotebox', 'blockquote') %}
+    {{ caller() }}
+    <div class="quotebox__name">{{ name }}{% if date %}, {{ date }}{% endif %}</div>
+    <div class="quotebox__quote-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 64">
+        <g filter="url(#filter0_d)">
+          <path stroke="#fff" stroke-width="5" d="M6 2.5L30.86 53 57 2.5"/>
+        </g>
+        <path fill="#c9d0d7" d="M30.86 50.5L6 0h51L30.86 50.5z"/>
+        <defs>
+          <filter id="filter0_d" width="58.46" height="62.2" x=".76" y="1.34" color-interpolation-filters="sRGB"
+                  filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dx="-3" dy="5"/>
+            <feColorMatrix values="0 0 0 0 0.529412 0 0 0 0 0.6 0 0 0 0 0.647059 0 0 0 1 0"/>
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  {% endcall %}
+{% endmacro %}

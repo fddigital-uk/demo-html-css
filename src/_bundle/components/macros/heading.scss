@@ -1,0 +1,12 @@
+.heading {
+  &__tag {
+    color: $text-color-page-head;
+    text-shadow: $text-page-head-shadow;
+  }
+  &__subtext {
+    display: block;
+    margin-top: $spacing;
+    color: $text-color-page-head;
+    text-align: center;
+  }
+}

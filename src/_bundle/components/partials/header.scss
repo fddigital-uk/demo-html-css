@@ -9,12 +9,13 @@
   position: fixed;
   padding-top: $spacing-medium;
   padding-bottom: $spacing-medium;
+  background: linear-gradient(180deg, rgba(46, 26, 56,0.8), transparent);
 
   &__inner {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    height: $header-height-desktop;
+    height: 6rem;
   }
 
   &__wrap {
@@ -23,7 +24,7 @@
   }
 
   &__action {
-    max-width: 5rem;
+    max-width: 5.5rem;
 
     a {
       display: block;

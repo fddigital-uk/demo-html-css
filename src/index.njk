@@ -1,6 +1,10 @@
 ---
 title: Homepage
 ---
+{% from "./_includes/macros/heading.njk" import heading %}
+{% from "./_includes/macros/blurb.njk" import blurb %}
+{% from "./_includes/macros/images.njk" import images %}
+{% from "./_includes/macros/quoteBox.njk" import quoteBox %}
 
 {% extends 'base.njk' %}
 
@@ -9,7 +13,128 @@ title: Homepage
 {%- endblock %}
 
 {% block body %}
-    <h1 class="center">It all started with this...</h1>
+  <section class="container-fluid space">
+    {% call heading('h1', 'FAQ<small>s</small>', false, 'center') %}by Nick Taylor, 27th November 2020{% endcall %}
+    <div class="grid-container">
+      <div class="row">
+        <div class="col-xs-12">
+          {% call quoteBox('Nick Taylor', '28th November 2020') %}
+            <h2>A Wise Man Once Said...</h2>
+            <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
+              varius imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
+            <p>Pellentesque leo justo, consequat ut pulvinar nec, tincidunt luctus urna. Vivamus sit amet tincidunt
+              neque, eget eleifend tortor. Morbi vel lacus tincidunt, egestas urna sed, varius augue.</p>
+            <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
+              odio. Pellentesque venenatis gravida congue.</p>
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 flex">
+          {% call blurb('filled', 'box-row') %}
+            <h2>Our Planet is a Gift...</h2>
+            <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
+              varius
+              imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
+            <p>Pellentesque leo justo, consequat ut pulvinar nec, tincidunt luctus urna. Vivamus sit amet tincidunt
+              neque,
+              eget
+              eleifend tortor. Morbi vel lacus tincidunt, egestas urna sed, varius augue.</p>
+            <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
+              odio.
+              Pellentesque venenatis gravida congue.</p>
+            <a href="#findoutmore" class="button">Find Out More</a>
+          {% endcall %}
+        </div>
+        <div class="col-xs-12 col-md-6 flex">
+          {{ images([
+            {
+              src: "/static/images/lake-sky.png",
+              title: "This is a title",
+              alt: "This is the alt 1"
+            },
+            {
+              src: "/static/images/earth.png",
+              title: "This is a title",
+              alt: "This is the alt 2"
+            },
+            {
+              src: "/static/images/mars.png",
+              title: "This is a title",
+              alt: "This is the alt 3"
+            }
+          ], 'staggered') }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--color-one space space--pull-up">
+    {% call heading('h1', 'Awesomeness', false, 'center') %}All your questions answered...{% endcall %}
+    <div class="container-fluid ">
+      <div class="grid-container">
+        <div class="row">
+          <div class="col-md-12">
+            {% call blurb('filled', 'box-row') %}
+              <h2>Our Planet is a Gift...</h2>
+              <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
+                varius
+                imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
+              <p>Pellentesque leo justo, consequat ut pulvinar nec, tincidunt luctus urna. Vivamus sit amet tincidunt
+                neque,
+                eget
+                eleifend tortor. Morbi vel lacus tincidunt, egestas urna sed, varius augue.</p>
+              <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
+                odio.
+                Pellentesque venenatis gravida congue.</p>
+              <a href="#findoutmore" class="button">Find Out More</a>
+            {% endcall %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 flex">
+            {{ images([
+              {
+                src: "/static/images/lake-sky.png",
+                title: "This is a title",
+                alt: "This is the alt 1"
+              },
+              {
+                src: "/static/images/earth.png",
+                title: "This is a title",
+                alt: "This is the alt 2"
+              },
+              {
+                src: "/static/images/mars.png",
+                title: "This is a title",
+                alt: "This is the alt 3"
+              }
+            ], 'horizontal') }}
+          </div>
+          <div class="col-xs-12 col-md-6 flex">
+            {{ images([
+              {
+                src: "/static/images/lake-sky.png",
+                title: "This is a title",
+                alt: "This is the alt 1"
+              },
+              {
+                src: "/static/images/earth.png",
+                title: "This is a title",
+                alt: "This is the alt 2"
+              },
+              {
+                src: "/static/images/mars.png",
+                title: "This is a title",
+                alt: "This is the alt 3"
+              }
+            ], 'vertical') }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
 
 {% block scripts %}

@@ -1,0 +1,5 @@
+{% macro blurb(style, class, tag = 'div') %}
+  <{{ tag }} class="blurb {% if style %}blurb--{{ style }}{% endif%} {{ class }}">
+    {{ caller() }}
+  </{{ tag }}>
+{% endmacro %}

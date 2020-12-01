@@ -10,12 +10,12 @@
     <title>{{ title }}</title>
     {% block head %}{% endblock %}
   </head>
-  <body class="flex flex-col min-h-screen {{ 'debug-screens' if devMode }}">
+  <body>
     {% include 'partials/header.njk' %}
     <div class="main__background">
       <img src="/static/images/space-mountains.jpg" />
     </div>
-    <main class="main container {% block main_class %}{% endblock %}">
+    <main class="main {% block main_class %}{% endblock %}">
       {% block body %}{% endblock %}
     </main>
     {% include 'partials/footer.njk' %}

@@ -1,20 +1,25 @@
 @import "./styles/variables";
 @import "./styles/base";
+@import "./styles/flexboxgrid";
 
 @import "./components/partials/header";
 @import "./components/partials/footer";
+@import "./components/macros/blurb";
+@import "./components/macros/heading";
+@import "./components/macros/image";
+@import "./components/macros/images";
+@import "./components/macros/quoteBox";
 
 .main {
   display: flex;
   margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
   padding-bottom: $spacing-medium;
   min-height: calc(100vh - #{$header-height-mobile});
-
-  > *:not(:first-child) {
-    margin-top: $spacing-xlarge;
-  }
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
 
   &__background {
     position: fixed;
@@ -29,6 +34,45 @@
       width: 100%;
       flex-grow: 1;
       object-fit: cover;
+      object-position: bottom;
     }
+  }
+}
+
+.main  {
+  > * {
+    margin-top: $spacing-xxlarge;
+  }
+}
+
+.space {
+  > *:not(:first-child) {
+    margin-top: $spacing-xxlarge;
+  }
+
+  &.space--pull-up {
+    > *:not(:first-child) {
+      margin-top: $spacing-xxlarge;
+    }
+    > header+ *:not(:first-child)  {
+      margin-top: $spacing-xxlarge/2;
+    }
+  }
+}
+
+.section {
+  width: 100%;
+  padding: $spacing-xlarge*2 0;
+  &--color-one {
+    background-color: transparentize($color-one, 0.5);
+  }
+  &--color-two{
+    background-color: transparentize($color-two, 0.5);
+  }
+  &--color-three{
+    background-color: transparentize($color-three, 0.5);
+  }
+  &--color-four{
+    background-color: transparentize($color-four, 0.5);
   }
 }

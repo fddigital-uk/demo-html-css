@@ -4,7 +4,7 @@ import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
 import svelte from 'rollup-plugin-svelte'
 import svg from 'rollup-plugin-svg'
-import { terser } from 'rollup-plugin-terser'
+import {terser} from 'rollup-plugin-terser'
 import postcss from 'postcss';
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -21,9 +21,12 @@ export default {
       DEV_MODE: dev,
     }),
     scss({
-      process: css => postcss({
-        minimize: !dev,
-      }).process(css).then(result => result.css),
+      processor: css => postcss([
+        require('postcss-import'),
+        require('postcss-custom-media'),
+        require('postcss-nested'),
+        require('autoprefixer'),
+      ]),
       output: 'dist/assets/main.bundle.css',
       watch: 'src/_bundle/'
 

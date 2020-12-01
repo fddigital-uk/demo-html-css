@@ -1,0 +1,17 @@
+.quotebox {
+  display: block;
+  margin: 0 0 63px;
+  position: relative;
+
+  &__name {
+    font-style: italic;
+    text-align: right;
+  }
+
+  &__quote-arrow {
+    width: 60px;
+    position: absolute;
+    bottom: -67px;
+    right: $spacing-medium;
+  }
+}

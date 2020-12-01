@@ -1,0 +1,8 @@
+{% from "./image.njk" import image %}
+{% macro images(imgs, style) %}
+  <div class="images {% if style %}images--{{ style }}{% endif %}" style="--img-cont-height: 28rem">
+    {% for img in imgs -%}
+      <div class="images__wrap">{{ image(img.src, img.title, img.alt, 'images__image') }}</div>
+    {% endfor %}
+  </div>
+{% endmacro %}
