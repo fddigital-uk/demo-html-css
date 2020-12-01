@@ -5,6 +5,8 @@ title: Homepage
 {% from "./_includes/macros/blurb.njk" import blurb %}
 {% from "./_includes/macros/images.njk" import images %}
 {% from "./_includes/macros/quoteBox.njk" import quoteBox %}
+{% from "./_includes/macros/faqs.njk" import faqs %}
+
 
 {% extends 'base.njk' %}
 
@@ -13,12 +15,13 @@ title: Homepage
 {%- endblock %}
 
 {% block body %}
-  <section class="container-fluid space">
-    {% call heading('h1', 'FAQ<small>s</small>', false, 'center') %}by Nick Taylor, 27th November 2020{% endcall %}
+
+  <section class="container-fluid space space--pull-up">
+    {{ heading('h1', 'Read this...', false, 'center') }}
     <div class="grid-container">
       <div class="row">
         <div class="col-xs-12">
-          {% call quoteBox('Nick Taylor', '28th November 2020') %}
+          {% call quoteBox('Nick Taylor', '28th November 2020', 'color-two') %}
             <h2>A Wise Man Once Said...</h2>
             <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
               varius imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
@@ -33,7 +36,7 @@ title: Homepage
     <div class="grid-container">
       <div class="row">
         <div class="col-xs-12 col-md-6 flex">
-          {% call blurb('filled', 'box-row') %}
+          {% call blurb('color-one', 'box-row') %}
             <h2>Our Planet is a Gift...</h2>
             <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
               varius
@@ -45,7 +48,7 @@ title: Homepage
             <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
               odio.
               Pellentesque venenatis gravida congue.</p>
-            <a href="#findoutmore" class="button">Find Out More</a>
+            <a href="#findoutmore" class="button alt">Find Out More</a>
           {% endcall %}
         </div>
         <div class="col-xs-12 col-md-6 flex">
@@ -70,13 +73,31 @@ title: Homepage
       </div>
     </div>
   </section>
+  {{ faqs([
+    {
+      question: "How big is the sun compared to earth?",
+      answer: "It's 109 times wider than earth, measuring 864,000 miles in diameter."
+    },
+    {
+      question: "How much of the earth’s surface is water?",
+      answer: "71%, that's 140 million miles<sup>2</sup> of the earths 197 million miles<sup>2</sup> surface!"
+    },
+    {
+      question: "What is the biggest planet in our solar system?",
+      answer: "Why Jupiter of course!"
+    },
+    {
+      question: "Have we found life on any other planet?",
+      answer: "Not yet!"
+    }
+  ], 'color-three', 'container-fluid') }}
   <section class="section section--color-one space space--pull-up">
     {% call heading('h1', 'Awesomeness', false, 'center') %}All your questions answered...{% endcall %}
     <div class="container-fluid ">
       <div class="grid-container">
         <div class="row">
           <div class="col-md-12">
-            {% call blurb('filled', 'box-row') %}
+            {% call blurb('color-three', 'box-row') %}
               <h2>Our Planet is a Gift...</h2>
               <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
                 varius

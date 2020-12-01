@@ -1,5 +1,9 @@
 .blurb {
-  padding: $spacing-medium;
+  padding: $spacing;
+
+  > * {
+    margin: 0;
+  }
 
   > *:not(:first-child) {
     margin-top: $spacing;
@@ -13,12 +17,43 @@
     }
   }
 
-  &--filled {
-    background-color: $color-three;
-    box-shadow: $color-three-shadow;
-    border-color: $color-three-border;
+  &--color-one, &--color-two, &--color-three, &--color-four {
     border-style: solid;
     border-width: 5px;
   }
+
+  &--color-one {
+    background-color: $color-one;
+    box-shadow: $box-shadow $color-one-shadow;
+    border-color: $color-one-border;
+    color: $color-one-text;
+  }
+
+  &--color-two {
+    background-color: $color-two;
+    box-shadow: $box-shadow $color-two-shadow;
+    border-color: $color-two-border;
+    color: $color-two-text;
+  }
+
+  &--color-three {
+    background-color: $color-three;
+    box-shadow: $box-shadow $color-three-shadow;
+    border-color: $color-three-border;
+    color: $color-three-text;
+  }
+
+  &--color-four {
+    background-color: $color-four;
+    box-shadow: $box-shadow $color-four-shadow;
+    border-color: $color-four-border;
+    color: $color-four-text;
+  }
 }
 
+
+@media (--sm-viewport) {
+  .blurb {
+    padding: $spacing-medium;
+  }
+}

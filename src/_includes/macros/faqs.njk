@@ -1,0 +1,32 @@
+{% from "./heading.njk" import heading, headingTag %}
+{% from "./blurb.njk" import blurb %}
+
+{% macro faq(question, answer, name, style, class) %}
+  <article class="faq">
+    <label class="faq__label" for="{{ name }}">
+      {% call headingTag('h2') %}{{ question | safe }}{% endcall %}
+      <div class="button"><span>Answer</span><i class="fas fa-sort-down"></i> </div>
+    </label>
+    <input class="hidden" id="{{ name }}" name="{{ name }}" type="checkbox"/>
+    {% call blurb(style, 'hidden faq__answer') %}
+      <p>{{ answer | safe }}</p>
+      <svg class="faq__arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 76 36">
+        <path stroke="#fff" stroke-width="5" d="M2 33.5L37.22 4l37.04 29.5"/>
+        <path fill="#C7D1D8" d="M37.22 6.5L2 36h72.26L37.22 6.5z"/>
+      </svg>
+    {% endcall %}
+  </article>
+{% endmacro %}
+
+{% macro faqs(questions, style, class) %}
+  <section class="section faqs space space--pull-up {{ class }}">
+    {% call heading('h1', 'FAQ<small>s</small>', false, 'center') %}Submit your FAQ using the form <a href="#form">over
+      here</a>.{% endcall %}
+    <div class="faqs__list space space--small">
+      {% for q in questions %}
+        {{ faq(q.question, q.answer, 'faq' + loop.index, style) }}
+      {% endfor %}
+    </div>
+  </section>
+{% endmacro %}
+

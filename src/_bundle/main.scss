@@ -5,6 +5,7 @@
 @import "./components/partials/header";
 @import "./components/partials/footer";
 @import "./components/macros/blurb";
+@import "./components/macros/faqs";
 @import "./components/macros/heading";
 @import "./components/macros/image";
 @import "./components/macros/images";
@@ -20,13 +21,14 @@
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 
   &__background {
     position: fixed;
     display: flex;
     height: 100vh;
     width: 100vw;
-    z-index: -1;
+    z-index: -2;
     top: 0;
 
     img {
@@ -36,10 +38,22 @@
       object-fit: cover;
       object-position: bottom;
     }
+
+    &-overlay {
+      position: fixed;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      z-index: 0;
+      top: 0;
+      background: linear-gradient(180deg, rgba(0, 39, 63, 0) -30%, #001826 94.89%);
+      opacity: 0;
+    }
   }
+
 }
 
-.main  {
+.main {
   > * {
     margin-top: $spacing-xxlarge;
   }
@@ -50,11 +64,18 @@
     margin-top: $spacing-xxlarge;
   }
 
+  &--small {
+    > *:not(:first-child) {
+      margin-top: $spacing-medium;
+    }
+  }
+
   &.space--pull-up {
     > *:not(:first-child) {
       margin-top: $spacing-xxlarge;
     }
-    > header+ *:not(:first-child)  {
+
+    > header + *:not(:first-child) {
       margin-top: $spacing-xxlarge/2;
     }
   }
@@ -62,17 +83,33 @@
 
 .section {
   width: 100%;
-  padding: $spacing-xlarge*2 0;
+  color: $color-neutral;
+
+  header {
+    a {
+      color: $text-color-page-head;
+    }
+  }
+
+  &--color-one, &--color-two, &--color-three, &--color-four {
+    padding: $spacing-xlarge*2 0;
+  }
+
   &--color-one {
     background-color: transparentize($color-one, 0.5);
+    color: $color-one-text;
   }
-  &--color-two{
+
+  &--color-two {
     background-color: transparentize($color-two, 0.5);
   }
-  &--color-three{
+
+  &--color-three {
     background-color: transparentize($color-three, 0.5);
   }
-  &--color-four{
+
+  &--color-four {
     background-color: transparentize($color-four, 0.5);
   }
 }
+

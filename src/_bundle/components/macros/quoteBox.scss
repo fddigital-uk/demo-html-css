@@ -14,4 +14,49 @@
     bottom: -67px;
     right: $spacing-medium;
   }
+
+  &--color-one{
+    .quotebox__quote-arrow__outer {
+      stroke: $color-one-border;
+    }
+    .quotebox__quote-arrow__inner {
+      fill: $color-one;
+    }
+    .quotebox__quote-arrow__shadow {
+      fill: $color-one-shadow;
+    }
+  }
+  &--color-two {
+    .quotebox__quote-arrow__outer {
+      stroke: $color-two-border;
+    }
+    .quotebox__quote-arrow__inner {
+      fill: $color-two;
+    }
+    .quotebox__quote-arrow__shadow {
+      fill: $color-two-shadow;
+    }
+  }
+  &--color-three {
+    .quotebox__quote-arrow__outer {
+      stroke: $color-three-border;
+    }
+    .quotebox__quote-arrow__inner {
+      fill: $color-three;
+    }
+    .quotebox__quote-arrow__shadow {
+      fill: $color-three-shadow;
+    }
+  }
+  &--color-four {
+    .quotebox__quote-arrow__outer {
+      stroke: $color-four-border;
+    }
+    .quotebox__quote-arrow__inner {
+      fill: $color-four;
+    }
+    .quotebox__quote-arrow__shadow {
+      fill: $color-four-shadow;
+    }
+  }
 }

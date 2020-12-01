@@ -1,0 +1,65 @@
+.faq {
+  &__label {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  &__answer {
+    position: relative;
+    margin-top: $spacing-medium * 2;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -36px;
+    right: calc(50% - 38px);
+    width: 76px;
+    margin: 0!important;
+  }
+
+  .h1, h2, h3, h4, h5 {
+    font-size: 1.5rem;
+    text-shadow: none;
+    flex-grow: 1;
+  }
+
+  .button {
+    margin: 0 0 0 $spacing;
+
+    span {
+      display: none;
+    }
+  }
+
+  input:checked + div {
+    display: block;
+  }
+}
+
+@media (--sm-viewport) {
+  .faq {
+    &__label {
+      flex-direction: row;
+    }
+
+    .h1, h2, h3, h4, h5 {
+      text-align: left;
+    }
+
+    &__arrow {
+      right: 1rem;
+    }
+
+    .button {
+      margin: 0 0 0 $spacing-medium;
+      i {
+        display: none;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/main.bundle.css?version={{ version }}">
     <script src="https://kit.fontawesome.com/aaa34418c2.js" crossorigin="anonymous"></script>
     <script defer src="/assets/main.js?version={{ version }}"></script>
+    <script defer src="/assets/index.js?version={{ version }}"></script>
     <title>{{ title }}</title>
     {% block head %}{% endblock %}
   </head>
@@ -14,6 +15,7 @@
     {% include 'partials/header.njk' %}
     <div class="main__background">
       <img src="/static/images/space-mountains.jpg" />
+      <div class="main__background-overlay"></div>
     </div>
     <main class="main {% block main_class %}{% endblock %}">
       {% block body %}{% endblock %}
