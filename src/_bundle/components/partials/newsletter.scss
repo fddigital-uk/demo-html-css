@@ -1,0 +1,30 @@
+.newsletter {
+  display: flex;
+  flex-direction: column;
+
+  h1, h2, h3, h4, h5 {
+    font-size: 1.9rem;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__label-text {
+    width: 5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  &__field {
+    flex-grow: 1;
+    width: auto;
+    margin-left: $spacing;
+  }
+
+  &__button {
+    line-height: 2.3rem;
+  }
+}

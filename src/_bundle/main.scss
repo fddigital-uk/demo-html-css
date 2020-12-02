@@ -1,16 +1,20 @@
 @import "./styles/variables";
 @import "./styles/base";
 @import "./styles/flexboxgrid";
+@import "./styles/generic";
 
-@import "./components/partials/header";
 @import "./components/partials/footer";
+@import "./components/partials/hamburgerMenu";
+@import "./components/partials/header";
+@import "./components/partials/newsletter";
+
 @import "./components/macros/blurb";
 @import "./components/macros/faqs";
-@import "./components/partials/hamburgerMenu";
 @import "./components/macros/heading";
 @import "./components/macros/image";
 @import "./components/macros/images";
 @import "./components/macros/quoteBox";
+@import "./components/macros/testimonials";
 
 .main {
   display: flex;

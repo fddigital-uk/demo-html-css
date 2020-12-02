@@ -6,6 +6,7 @@ title: Homepage
 {% from "./_includes/macros/images.njk" import images %}
 {% from "./_includes/macros/quoteBox.njk" import quoteBox %}
 {% from "./_includes/macros/faqs.njk" import faqs %}
+{% from "./_includes/macros/testimonials.njk" import testimonials %}
 
 
 {% extends 'base.njk' %}
@@ -15,7 +16,6 @@ title: Homepage
 {%- endblock %}
 
 {% block body %}
-
   <section class="container-fluid space space--pull-up">
     {{ heading('h1', 'Read this...', false, 'center') }}
     <div class="grid-container">
@@ -36,7 +36,7 @@ title: Homepage
     <div class="grid-container">
       <div class="row">
         <div class="col-xs-12 col-md-6 flex">
-          {% call blurb('color-one', 'box-row') %}
+          {% call blurb('color-one') %}
             <h2>Our Planet is a Gift...</h2>
             <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
               varius
@@ -97,7 +97,7 @@ title: Homepage
       <div class="grid-container">
         <div class="row">
           <div class="col-md-12">
-            {% call blurb('color-three', 'box-row') %}
+            {% call blurb('color-three') %}
               <h2>Our Planet is a Gift...</h2>
               <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
                 varius
@@ -154,6 +154,37 @@ title: Homepage
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="container-fluid section space">
+    {{ heading('h1', 'Testimonials', false, 'center') }}
+
+    {{ testimonials([
+      {
+        name: "Geoffrey",
+        from: "England",
+        text: "This was one of the best things that I ever did. I highly recommend you give this a go!",
+        date: "21st November 2020"
+      },
+      {
+        name: "Peter",
+        from: "USA",
+        text: "You should really get into this. If there’s one thing you do for yourself this year, the year of COVID, this is IT! Don’t waste any more time.",
+        date: "14th July 2020"
+      },
+      {
+        name: "Frank",
+        from: "Ireland",
+        text: "Who’d have thought this would exist? But I am SO glad that it does. BUY BUY BUY!",
+        date: "1st August 2020"
+      }
+    ]) }}
+
+  </section>
+  <section class="section--color-three section">
+    <div class="container-fluid space space--pull-up index__newsletter">
+      {{ heading('h1', 'Let\'s keep in touch!', false, 'center') }}
+      {% include "./_includes/partials/newsletter.njk" %}
     </div>
   </section>
 {% endblock %}

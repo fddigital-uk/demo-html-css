@@ -1,0 +1,21 @@
+{% from "./blurb.njk" import blurb %}
+{% macro testimonials(items, class) %}
+<div class="testimonials {{ class }}">
+  <div class="grid-container">
+    <div class="row">
+      {% for test in items %}
+        <div class="col-xs-12 col-md-4">
+          <h3>{{ test.name }}{% if test.from %}, {{ test.from }}{% endif %}</h3>
+          <time class="testimonials__date">{{ test.date }}</time>
+          {% call blurb('color-three', 'testimonials__quote-block') %}
+            <p>{{ test.text | safe }}</p>
+            <svg class="testimonials__arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 30">
+              <path class="testimonials__arrow__outer" stroke="#fff" stroke-width="5" d="M2.84 27.62L13.92 5.5l11.65 22.12"/>
+              <path class="testimonials__arrow__inner" fill="#C7D1D8" d="M13.92 7.38L2.84 29.5h22.73L13.92 7.38z"/>
+            </svg>
+          {% endcall %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

@@ -1,2 +1,8 @@
 .index {
+
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

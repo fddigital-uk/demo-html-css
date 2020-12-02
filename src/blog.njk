@@ -1,14 +1,37 @@
 ---
 title: Blog
 ---
-
 {% extends 'base.njk' %}
 
+{% from "./_includes/macros/heading.njk" import heading, headingTag %}
+{% from "./_includes/macros/blurb.njk" import blurb %}
+
 {% block body %}
-  <div>
-    <h1>Blog</h1>
-  </div>
+  <section class="container-fluid section space">
+    {% call heading('h1', 'When Will We Extend Life Beyond Our Planet?', false, 'center') %}by Nick Taylor, 20th November 2020{% endcall %}
+    {% call blurb('color-three', 'content') %}
+      <h2>What we know so far...</h2>
+      <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
+        varius imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
+      <p>Pellentesque leo justo, consequat ut pulvinar nec, tincidunt luctus urna. Vivamus sit amet tincidunt
+        neque, eget eleifend tortor. Morbi vel lacus tincidunt, egestas urna sed, varius augue.</p>
+      <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
+        odio. Pellentesque venenatis gravida congue.</p>
+      <div class="image image--50-vh">
+        <div class="image__container">
+          <div class="image__wrap"><img src="/static/images/mars-roamer.png" alt="martian roaming mars"/></div>
+          <div class="image__subtext">Image by ,..... Unsplash</div>
+        </div>
+      </div>
+      <p>Quisque euismod sem non ex commodo dapibus. Duis rutrum lobortis volutpat. Nullam laoreet lorem quis
+        varius imperdiet. Ut nunc lectus, gravida eget porta consequat, volutpat suscipit ipsum.</p>
+      <p>Pellentesque leo justo, consequat ut pulvinar nec, tincidunt luctus urna. Vivamus sit amet tincidunt
+        neque, eget eleifend tortor. Morbi vel lacus tincidunt, egestas urna sed, varius augue.</p>
+      <p>Sed feugiat, libero vitae laoreet venenatis, ligula erat imperdiet enim, vitae posuere mauris nisl in
+        odio. Pellentesque venenatis gravida congue.</p>
+    {% endcall %}
+  </section>
 {% endblock %}
 
-{% block scripts %}
-{% endblock %}
+  {% block scripts %}
+  {% endblock %}
