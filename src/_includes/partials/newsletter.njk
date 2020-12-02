@@ -1,8 +1,14 @@
 {% from "../macros/blurb.njk" import blurb %}
 
-{% call blurb('color-three', 'newsletter space space--small') %}
-  <h3>Sign up for our newsletter...</h3>
-  <label class="newsletter__label"><span class="newsletter__label-text">Name:</span><input class="newsletter__field" type="text" required/></label>
-  <label class="newsletter__label"><span class="newsletter__label-text">Email:</span><input class="newsletter__field" type="email" required/></label>
-  <button type="submit" class="button newsletter__button">Sign me up!</button>
-{% endcall %}
+<form class="newsletter__form" action="">
+  {% call blurb('color-three', 'newsletter space space--small') %}
+    <h3>Sign up for our newsletter...</h3>
+    <label class="newsletter__label">
+      <span class="newsletter__label-text">Name:</span>
+      <input class="newsletter__field" type="text" required placeholder="Your earth name"/></label>
+    <label class="newsletter__label">
+      <span class="newsletter__label-text">Email:</span>
+      <input class="newsletter__field" type="email" required placeholder="Your outer space email"/></label>
+    <button type="submit" class="button newsletter__button">Sign me up!</button>
+  {% endcall %}
+</form>

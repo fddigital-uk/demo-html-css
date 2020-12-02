@@ -19,7 +19,6 @@
 .main {
   display: flex;
   margin-top: 10rem;
-  padding-bottom: $spacing-medium;
   min-height: calc(100vh - #{$header-height-mobile});
   flex-grow: 1;
   align-items: center;
